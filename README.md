@@ -61,3 +61,18 @@ UrlImageViewHelper.setUrlDrawable(imageView, "content://com.android.contacts/con
 **Does it work in list adapters when views are reused? (convertView)**
 
 Yes.
+
+### FORK
+
+**What have you added since you forked this?**
+
+One class, FilePathThumbnailer, and the changes to UrlImageViewHelper to call it.
+
+**So how does it work?**
+
+Same as above, except for local files you want converted to a thumbnail which is then cached,
+you need to pass the Path instead of the Url to the file. 
+
+```java
+UrlImageViewHelper.setUrlDrawable(imageView, "/storage/sdcard0/Camera/IMG03241.JPG", R.drawable.loading_image_placeholder);
+```
