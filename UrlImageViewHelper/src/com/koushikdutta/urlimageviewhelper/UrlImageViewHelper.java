@@ -689,6 +689,7 @@ public final class UrlImageViewHelper {
     private static ContentUrlDownloader mContentDownloader = new ContentUrlDownloader();
     private static ContactContentUrlDownloader mContactDownloader = new ContactContentUrlDownloader();
     private static FileUrlDownloader mFileDownloader = new FileUrlDownloader();
+    private static FilePathThumbnailer mFilePathThumbnailer = new FilePathThumbnailer();
     private static ArrayList<UrlDownloader> mDownloaders = new ArrayList<UrlDownloader>();
     public static ArrayList<UrlDownloader> getDownloaders() {
         return mDownloaders;
@@ -699,6 +700,7 @@ public final class UrlImageViewHelper {
         mDownloaders.add(mContactDownloader);
         mDownloaders.add(mContentDownloader);
         mDownloaders.add(mFileDownloader);
+        mDownloaders.add(mFilePathThumbnailer);  // Send path to cache a thumbnail of the local image.
     }
     
     public static interface RequestPropertiesCallback {
