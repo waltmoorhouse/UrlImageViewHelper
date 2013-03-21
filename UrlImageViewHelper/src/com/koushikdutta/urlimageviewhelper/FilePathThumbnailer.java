@@ -28,7 +28,7 @@ public class FilePathThumbnailer implements UrlDownloader {
             protected Void doInBackground(final Void... params) {
                 try {
                 	// Can be pulled from values/dimens.xml
-            		int thumbSize = 150; //context.getResources().getDimensionPixelSize(R.dimen.thumb_size);
+            		int thumbSize = 750; //context.getResources().getDimensionPixelSize(R.dimen.thumb_size);
             		
             	    final BitmapFactory.Options options = new BitmapFactory.Options();
             	    options.inJustDecodeBounds = true;
